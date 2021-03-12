@@ -56,6 +56,15 @@ spec:
         app.kubernetes.io/name: hello-world
         app.kubernetes.io/instance: hello-world
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+                - key: kubernetes.io/hostname
+                  operator: In
+                  values:
+                  - k3d-demo-agent-1
       serviceAccountName: hello-world
       securityContext:
         {}
