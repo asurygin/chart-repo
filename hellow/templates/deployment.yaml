@@ -23,15 +23,6 @@ spec:
         component: {{ template "hellow.fullname" . }}
         release: {{ .Release.Name }}
 spec:
-  affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-           - matchExpressions:
-             - key: kubernetes.io/hostname
-               operator: In
-               values:
-                - {{ .Values.Node.hostname}}
   containers:
   - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
     imagePullPolicy: Always
