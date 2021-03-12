@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ template "hellow.fullname" . }}
   labels: 
-  app: {{ template "hellow.fullname" . }}
+  app.kubernetes.io/name: {{ template "hellow.fullname" . }}
   release: {{ .Release.Name }}
 spec:
   replicas: 1
@@ -11,13 +11,13 @@ spec:
      type: RollingUpdate
   selector:
     matchLabels:
-      app: {{ template "hellow.fullname" . }}
+      app.kubernetes.io/name: {{ template "hellow.fullname" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       name: {{ template "hellow.fullname" . }}
       labels:
-        app: {{ template "hellow.fullname" . }}
+        app.kubernetes.io/name: {{ template "hellow.fullname" . }}
         release: {{ .Release.Name }}
 spec:
   containers:
