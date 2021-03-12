@@ -4,7 +4,6 @@ metadata:
   name: {{ template "hellow.fullname" . }}
   labels: 
   app: {{ template "hellow.fullname" . }}
-  component: {{ template "hellow.fullname" . }}
   release: {{ .Release.Name }}
 spec:
   replicas: 1
