@@ -1,0 +1,13 @@
+apiVersion: v2
+name: hellow
+description: A Helm chart for Rancher  hellow
+type: application
+version: 0.0.1
+maintainers:
+ - name: Andrey Surygin
+   email: andrei.surygin@gmail.com
+appVersion: "1.16.0"
+dependencies:
+  - name:  hellow
+    version: "0.0.1"
+    repository: "file://../0.0.1"

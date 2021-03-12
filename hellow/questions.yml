@@ -1,0 +1,9 @@
+questions:
+- variable: internalPort
+  default: "42"
+  type: string
+  description: internalport docker container
+- variable: externalPort
+  default: "42"
+  type: string
+  description: externalport docker container

@@ -1,0 +1,6 @@
+dependencies:
+- name: hellow
+  repository: file://../0.0.1
+  version: 0.0.1
+digest: sha256:3b8cf262c1e7226e997bafdba20dde74db3de8795fc207d9331a3b9cf814cc44
+generated: "2021-03-12T14:07:14.54841803+03:00"

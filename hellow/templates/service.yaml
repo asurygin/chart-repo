@@ -1,0 +1,24 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "hellow.fullname" . }}
+  annotations:
+    workload.cattle.io/targetWorkloadIdNoop: "true"
+    workload.cattle.io/workloadPortBased: "true"
+  labels:
+     app: {{ template "hellow.fullname" . }}
+     component: {{ template "hellow.fullname" . }}
+     release: {{ .Release.Name }}
+  spec:
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: {{ template "hellow.fullname" . }}
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
+

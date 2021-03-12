@@ -1,0 +1,8 @@
+---
+
+image:
+   repository: tutum/hello-world
+   tag: latest
+   
+Node:
+  hostname: k3d-demo-agent-0
