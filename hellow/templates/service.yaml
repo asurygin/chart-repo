@@ -17,8 +17,4 @@ metadata:
       targetPort: 80
   selector:
     app: {{ template "hellow.fullname" . }}
-  sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
 
